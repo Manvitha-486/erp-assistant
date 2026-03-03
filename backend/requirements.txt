@@ -5,7 +5,7 @@ langchain==0.1.9
 langchain-core==0.1.26
 langchain-community==0.0.24
 sentence-transformers==2.5.1
-faiss-cpu==1.7.4
+faiss-cpu==1.13.2
 python-dotenv==1.0.1
 pypdf==4.0.2
 langchain-google-genai==0.0.9
