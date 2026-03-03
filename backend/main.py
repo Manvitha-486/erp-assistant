@@ -6,7 +6,9 @@ from retriever import init_custom_vector_store, list_available_documents, clear_
 import uvicorn
 import os
 
+print("--- STARTING APP ---", flush=True)
 app = FastAPI(title="ERP QA Assistant API")
+print("FastAPI initialized", flush=True)
 
 # Setup CORS for the React frontend
 app.add_middleware(

@@ -10,6 +10,9 @@ CORE_DATA_PATH = os.path.join(BASE_DATA_PATH, "core")
 UPLOADS_DATA_PATH = os.path.join(BASE_DATA_PATH, "uploads")
 VECTOR_STORE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vector_store")
 
+print(f"DEBUG: BASE_DATA_PATH={BASE_DATA_PATH}", flush=True)
+print(f"DEBUG: VECTOR_STORE_PATH={VECTOR_STORE_PATH}", flush=True)
+
 # Simple memory cache so we don't read from disk every time
 _vector_stores = {}
 
