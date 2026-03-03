@@ -1,0 +1,11 @@
+# Finance Manual
+
+## Invoice Reversal Process
+1. Navigate to Finance → Invoices
+2. Select the posted invoice
+3. Click "Reverse Transaction"
+4. Confirm reversal
+
+## Payment Terms
+Standard payment term is Net 30.
+For international clients, it is Net 45.

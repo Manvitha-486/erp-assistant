@@ -1,0 +1,456 @@
+Open ERP Introduction History Technical view Architecture Installing OpenERP Database Creation Install/uninstall and upgrade of modules
+
+Introduction
+ERP What is ERP? ERP is the acronym of Enterprise Resource Planning. ERP is just not only a software. ERP definition refers to both; ERP software and business strategies that implement ERP systems.ERP is one of the most widely implemented business software systems in a wide variety of industries and organizations. Enterprise resource planning (ERP) is an integrated computer-based system used to manage internal and external resources including tangible assets, financial resources, materials, and human resources. It is a software architecture whose purpose is to facilitate the flow of information between all business functions inside the boundaries of the organization and manage the connections to outside stakeholders. Built on a centralized database and normally utilizing a common computing platform, ERP systems consolidate all business operations into a uniform and enterprise wide system environment. ERP Purpose The main value ERP systems provide is the opportunity to integrate an entire organization. End to end business processes that were traditionally disjointed, now share information through a common database. The information flow is much more efficient in that there are clear lines of business processes across the enterprise. For example, in a horizontally integrated ERP system, a purchasing department would process a purchase order in a central database with a common General Ledger (GL). Both Accounts Payable and Receiving have access to the same GL so the data would be immediately available to them. There is no time lag, re-entry of information, or dependency on paper documents. By having a single point of entry the risk of inaccuracy in the end-to-end transaction is reduced, resulting in fewer reconciliation points. Additionally, the ERP systems of today provide utilities for vertical integration with suppliers and distributors. When properly implemented as part of a comprehensive transformation effort, ERP solutions can yield the following results: Reduced reliance on programmers to make software changes Integrated processes and information systems Consolidation and/or elimination of current systems Reduced complexity of application and technology portfolios Authoritative data source Reduced data redundancy and duplicative data entry More effective and efficient business processes
+
+Intro to Open ERP Open ERP is Enterprise Resource Planning software. It provides a complete, integrated ERP solution for small and medium sized businesses and organizations. Open ERP includes financial and analytic accounting, warehouse and inventory management, sales and purchase management, customer and supplier relations management, association management, tasks automation, human resource management, marketing campaign, document management, help desk, e-commerce integration, and point of sale functionality. More details about various features maybe be found on the Open ERP Features webpage. Open ERP has enjoyed robust development and growth in recent years, as shown in this screencast about global Open ERP deployments. OpenERP is a popular and powerful Open Source enterprise resource management (ERP) system that includes over 300 modules you can configure for your specific purposes. Combining CRM capabilities with financial management, product inventory, human resource control, purchase management, sales management, and point-of-sale capabilities, OpenERP provides you a complete solution for managing your business.
+
+History of Open ERP Open ERP– a fully featured, free and open source ERP software suite. But before describing the features of OpenERP there are some background points to make about the use of ERPs by enteprises and the scope of the post needs to be clarified. 2005- Debuted as Developer 2006- Development of various Modules 2007- Adapted by many mid-level companies and proved to be significative 2008- Tiny erp to Open ERP 2009- Updating with new modules as well as maintaining the existing modules. Many organisations, in the late nineties commissioned bespoke software to match their business processes. They worked from these processes and „computerised‟ them. Often as not the result amounted to a collection of Visual Basic forms which were (and often still are) very popular. However the following systemic problems emerged:
+
+Process Freeze: being „fleet of foot‟ is intrinsic to successful trading so having business processes effectively frozen in time by bespoke software (which cannot easily be modified) is a very bad thing indeed; Over Elaboration: operatives in the field have much less interest in ERP than do the managers in the office! So any excuse not to complete a form or navigate a menu will do just fine. Things like „more than you need‟ or over complex menus and mandatory fields which no longer exist on the new product just stop folk from using the software; Use Anywhere: even SMEs operate in multiple countries on different computing platforms and increasingly require access away from the office. Risks and integration costs are important barriers to all the advantages you gain from such systems. That‟s why, today, few small- and medium-sized companies use ERP. In addition, the larger ERP vendors such as SAP, Microsoft and Oracle haven‟t been able to reconcile the power and comprehensive cover of an ERP system with the simplicity and flexibility wanted by the users. But this is exactly what small and medium enterprises are looking for. The development processes of open source software, and the new business models adopted by their developers, provide a new way of resolving such problems of cost and quality for this kind of enterprise software. To make an ERP system fully available to small and medium enterprise, cost reduction is the first priority. Open source software makes it possible to greatly reduce development costs by aggressive reuse of open source software libraries; to eliminate intermediaries (the distributors), with all of their expensive sales overhead; to cut out selling costs by free publication of the software; and to considerably reduce the marketing overhead. Since there is open interaction among thousands of contributors and partners working on the same project, the quality of the resulting software benefits greatly from the scrutiny. And you can‟t be everything at once: accountant, software developer, salesperson, ISO 9001 quality professional, specialist in agricultural products, expert in the customs and habits of pharmaceutical vendors, just as a start. Faced with these wide-ranging requirements, what could be better than a world network of partners and contributors? Everyone adds their own contribution according to their professional competence. But the real challenge of development is to make this solution simple and flexible, as well as complete. And to reach this level of quality you need a leader and co-ordinator who can organize all of these activities. So the development team of Tiny ERP, today called Open ERP, is responsible for most of the organization, synchronization and coherence of the software.
+
+Technical view OpenERP is free and open source software written in the popular Python programming language. It uses GTK to create an attractive user front end and enterprise-class database PostgreSQL at back end. It has three main packages: OpenERP server, OpenERP desktop client and OpenERP Web Client. This means... OpenERP is a Client/Server system that works over a IP Network. OpenERP programming language is Python. OpenERP uses Object-Oriented technologies. OpenERP records its data with a PostgreSQL relational database.
+
+OpenERP business objects are modelled with an Object Relational Mapping (ORM) system. OpenERP offers three Human Machine Interfaces (HMI) a GTK client, a QT client and a web client (eTiny). OpenERP uses ReportLab for report generation in (PDF). OpenERP uses XML for several purpose: describing data, view, reports, data transport (XML-RPC) OpenERP installation is relatively easy to setup. It took our engineers less than an hour to have the system up and running with sample data for a 'services' company installed. OpenERP provides a good range of alternative sample data packs for differnet companies. The desktop client works on Mac, Linux and Windows. The web-based client worked on every browser we tested. The first thing to appreciate is that OpenERP is modular. It has 300 modules to chose from out-ofthe-box and, of course, you are free to write your own. It follows that you can assemble what is effectively a bespoke package to meet your company's processes. OpenERP is a modern Enterprise Management Software, released under the AGPL license, and featuring CRM, HR, Sales, Accounting, Manufacturing, Inventory, Project Management etc..It is based on OpenObject, a modular, scalable, and intuitive Rapid Application Development (RAD) framework written in Python. OpenObject features a complete and modular toolbox for quickly building applications: integrated Object-Relationship Mapping (ORM) support, template-based Model-View-Controller (MVC) interfaces, a report generation system, automated internationalization, and much more. Python is a high-level dynamic programming language, ideal for RAD, combining power with clear syntax, and a core kept small by design. PostgreSQL, is an object-relational database management system (ORDBMS). As with many other open source programs, PostgreSQL is not controlled by any single company, but has a global community of developers and companies to develop it. It contains all of the databases, each of which contains all data and most elements of the Open ERP system configuration. Extensible Markup Language (XML) provides a foundation for creating documents and document systems. XML operates on two main levels: first, it provides syntax for document markup; and second, it provides syntax for declaring the structures of documents. XML is clearly targeted at the Web, though it certainly has applications beyond it. Users who have worked with HTML before should be able to learn the basics of XML without too much difficulty. XML's simplicity is its key selling point, perhaps even its strongest feature.
+
+Architecture OpenERP uses the well-known client-server paradigm, with different pieces of software acting as client and server depending on the desired configuration.Client software OpenERP provides a thick desktop client (GTK+) on all platforms, and a web interface is also accessible using any modern browser.
+
+Open ERP Architecture
+
+To access Open ERP you can: use a web browser pointed at the Open ERP client-web server, or use an application client (the GTK client) installed on each computer. The two methods of access give very similar facilities, and you can use both on the same server at the same time. It‟s best to use the web browser if the Open ERP server is some distance away (such as on another continent) because it‟s more tolerant of time delays between the two than the GTK client is. The web client is also easier to maintain, because it‟s generally already installed on users‟ computers. Conversely you‟d be better off with the application client (called the GTK client because of the technology it‟s built with) if you‟re using a local server (such as in the same building). In this case the GTK client will be more responsive, so more satisfying to use. An Open ERP system is formed from three main components: the PostgreSQL database server, which contains all of the databases, each of which contains all data and most elements of the Open ERP system configuration, the Open ERP application server, which contains all of the enterprise logic and ensures that
+
+Open ERP runs optimally, the web server, a separate application called the Open Object client-web, which enables you to connect to Open ERP from standard web browsers and is not needed when you connect using a GTK client. Installing OpenERP OpenERP is distributed as packages/installers for most platforms, but can of course be installed from the source on any platform. Package installation Windows all-in-one installer, and separate installers for server, client, and webserver are on the website Linux openerp-server and openerp-client packages are available via corresponding package manager (e.g. Synaptic on Ubuntu) Mac look online for package installers for the GTK client, as well as tutorials for installing the server (e.g. devteam.taktik.be) Installing from source There are two alternatives: using a tarball provided on the website, or directly getting the source using Bazaar (distributed Source Version Control). You also need to install the required dependencies (PostgreSQL and a few Python libraries – see documentation on doc.openerp.com). Compilation tip: OpenERP being Python-based, no compilation step is needed Typical bazaar checkout procedure (on Debian-based Linux) $ sudo apt-get install bzr # install bazaar version control $ bzr branch lp:openerp # retrieve source installer $ cd openerp && python ./bzr_set.py # fetch code and perform setup For information about installation on other distributions, visit the documentation section by following Product ‣ Documentation on http://www.openerp.com. Detailed instructions are given there for different distributions and releases, and you should also check if there are more up to date instructions for the Ubuntu distribution as well.
+
+Database creation
+After installation, run the server and the client. From the GTK client, use File→Databases→New Database to create a new database (default super admin password is admin). Each database has its own modules and config, and demo data can be included. Use the technique outlined in this section to create a new database, openerp_ch01(Example) . This database will contain the demonstration data provided with Open ERP and a large proportion of the core Open ERP functionality. You‟ll need to know your super administrator password for this – or you‟ll have to find somebody who does have it to create this seed database.
+
+Creating a New Database If you‟re using the GTK client, choose Files -> Databases -> New database in the menu at the top left. Enter the super-administrator password, then the name of the new database you‟re creating. If you‟re using the web client, Start the database creation process from the Welcome page by clicking Databases and then completing the following fields on the Create new database form: Enter the super-administrator password, and the name of the new database you‟re creating. Super admin password : by default it‟s admin , if you or your system administrator haven‟t changed it, New database name : openerp_ch01 , Load Demonstration data checkbox: checked , Default Language : English , Administrator password : admin (because it‟s easiest to remember at this stage, but obviously completely insecure), Confirm password : admin . In both cases you‟ll see a checkbox that determines whether you load demonstration data or not. The consequences of checking this box or not affect the whole use of this database. In both cases you‟ll also see that you can choose the Administrator password. This makes your database quite secure because you can ensure that it is unique from the outset. (In fact many people find it hard to resist admin as their password!) Wait for the message showing that the database has been successfully created, along with the user accounts and passwords (admin/XXXX and demo/demo ). Now you‟ve created this seed database you can extend it without having to know the super-administrator password. Failure to create a database
+
+How do you know if you’ve successfully created your new database? You’re told if the database creation has been unsuccessful. If you have entered a database name using prohibited characters (or no name, or too short a name) you will be alerted by the dialog box Bad database name! explaining how to correct the error. If you’ve entered the wrong super-administrator password or a name already in use (some names can be reserved without your knowledge), you’ll be alerted by the dialog box Error during database creation!
+
+After a short delay you are connected to the new openerp_ch03 database as user adminwith the password you gave it. You‟ll have to go through the Setup wizard in steps:
+
+Setting up a blank database - first screen
+
+1. Select a profile : select Minimal Profile and click Next. 2. At the Define Main Company step you could select your own Company Name and Currency, and address details on the first tab General Information; and you can add more details on the second tab Report Information including a logo that would appear on reports. In this test you should leave everything untouched for the moment and just click Next: you‟ll change them later. 3. At the Summary page you can go back to change details if you need. Click the Install button. 4. Finally, at the Installation done page, click Start Configuration. Configuration consists of a set of wizards that help you through options for the installed modules. Since you chose the minimal database hardly anything is installed so this is a very simple process at the moment, starting with the menu layout Configuring a minimal database - first screen .
+
+Configuring a minimal database - first screen 1. At the first screen click Continue to go into the first wizard. Choose View Mode : Extended Interface so that you can see everything and then click Set to save it. 2. Click Skip Step to step over the next wizard, which would enable you to add other users. 3. You‟ve now reached the end of the configuration so click Continue to start using the system as the Administrator as shown in the screenshot Starting the minimal database.
+
+Starting the minimal database
+
+Once you‟re displaying the main menu you‟re able to see the following screen items, as shown in screenshot The Main Menu of the openerp_ch02 database: Two menus are available on the left: Partners, Administration. the Preferences toolbar to the top right, showing the user name, links to the Home page, Preferences, About and Logout, just below you‟ll find information about the Request system, links to the MAIN MENU and the SHORTCUTS, information about copyright and the database you‟re logged into at the bottom of the page, the main contents of the window with by the menu toolbar to the left: links generally line up on the right but there are none to show at the moment. Preferences toolbar When you‟re connected to Open ERP the Preferences toolbar indicates which user you‟re connected as. So it should currently be showing Welcome Administrator (unless you logged in as another user and it‟s reflecting the name of that user instead). You‟ll find a link to the Home page to its right. This takes you to either the dashboard or the available menus, depending on the user configuration. In the case of the openerp_ch02database so far the Home page is the Main Menu. But in general each user of the system is presented with a dashboard that‟s designed to show performance indicators and urgent documents that are most useful to someone of the user‟s position in the company. You‟ll see how to assign dashboards to different users in a later chapter. The next element in the Toolbar is a link to Preferences. By clicking that link you reach a page where the current user can set their password, a timezone, a working language, and a signature: The Password field gives the user the opportunity to change their own password. You should take steps (perhaps written policies) to prevent users making these too trivial. The Language field enables the user‟s working language to be changed. But first the system must be loaded with other languages for the user to be able to choose an alternative, which is described in the next subsection of this chapter. This is a mandatory field, although might initially be set as blank. The Timezone setting indicates the user‟s location to Open ERP. This can be different from that of the server. All of the dates in the system are converted to the user‟s timezone automatically. The Signature field gives the user a place for the signature attached to messages sent from within Open ERP. The About link gives information about the development of the Open ERP software and various links to other information. The Logout link enables you to logout and return to the original login page. You can then login to another database, or to the same database as another user. This page also gives you access to the super-administrator functions for managing databases on this server. The Requests link sits just below this toolbar. It is only visible if you‟re logged into a database. If your database is new it will say No request. You can click on that link to look at requests that have been sent to you at any time.
+
+Installing New functionality All of Open ERP‟s functionality is contained in its many and various modules. Many of these, the core modules, are automatically loaded during the initial installation of the system and can be updated online later. Although they‟re mostly not installed in your database at the outset, they‟re available on your computer for immediate installation. Additional modules can also be loaded online from the official Open ERP site http://openerp.com. These modules are inactive when they‟re loaded into the system, and can then be installed in a separate step. You‟ll start by checking if there are any updates available online that apply to your initial installation. Then you‟ll install a CRM module to complete your existing database. Update Modules List Click Administration ‣ Modules Management ‣ Update Modules List to start the updating tool. The Scan for new modules window opens showing the addresses that Open ERP will look in for downloading new modules (known as the repositories), and updating existing ones. Click Check New Modules to start the download from the specified locations. When it‟s complete you‟ll see a New Modules window indicating how many new modules were downloaded and how many existing modules were updated. Click OK to return to the updated list. It won‟t matter in this chapter if you can‟t download anything, but some of the later chapters refer to modules that aren‟t part of the core installation and have to be obtained from a remote repository.
+
+Installing and configuring modules
+Open ERP contain many modules . For example few modules are installed and explained below: product management (the product module), inventory control (the stock module), accounting and finance (the account module), purchase management (the purchase module), sales management (the sale module). Use the menu Administration ‣ Modules Management ‣ Modules ‣ Uninstalled modules to show the list of all modules that are registered within Open ERP but as yet uninstalled. Then: 1. Enter product into the Name field and click Filter to list the product module. 2. Click the name product in the list to display the product module in form view, rather than the list view that a search displays. 3. Click the Schedule for Installation button on the product module form. 4. Click the Search button at the top of the form to toggle back to the list view with search selection fields on it. 5. Search for the sale module then select it, too, as you did with product, to show it in form view. 6. Click the Dependencies tab to see that you‟ll automatically be loading the product, stock, mrp, and process modules along with the sale module. product and process are both already marked for installation as a result of the first steps. 7. Return to the Module tab and then click its Schedule for Installation button. 8. Click Apply Scheduled Upgrades in the Action toolbar to the right. 9. When the System Upgrade form appears, review the list of Modules to update – it may be longer than you had expected, and now includes all the modules you need, because the dependencies themselves had their own dependencies. Click Start Upgrade, wait for System upgrade done to be displayed, then click Start Configuration on that form.
+
+Configuration is required for both the accounts setup and the sales defaults. 1. Accept the defaults for the Fiscal Year and choose the Charts of Account to be None then click Continue. 2. The sales defaults are shown in the screenshot The module form once a module is installed. The selections you make determine how Open ERP‟s processes work by setting its default behaviour (although you can override any of them for any sales order, so you are not strictly bound by these defaults). Accept the initial set by clicking Set default behaviour. 3. You‟ve reached the end of this configuration stage so click Continue to continue using the system as the Administrator. You first reach a new tab Features that lists the new menus and views as shown in the figure The Features tab once a module is installed. Each of the modules that were installed has its own new tab - it‟s not only the one you see displayed in front of you. Click Next and Previous to move between them. 4. The main menu now displays all of the menu items that were loaded by the modules you installed. Click MAIN MENU to see this, shown in the screenshot Continuing with the database after installing new modules.
+
+The module form once a module is installed
+
+The Features tab once a module is installed
+
+Continuing with the database after installing new modules Data base is set by entering the necessary details required for the suitable module which is installed. It may be configuring the partners, products , categories, journals and accounts etc.
+
+Module Development- File Structure Even though many modules exists, customers requirements will vary accordingly. It is necessary for the developer to customize the module according to client requirements. Open ERP is a Python based client/server program for Enterprise Resource Planning. It consist of a client “openerp-client” and a server “openerp-server” while the persistence is provided by Postgresql. Open ERP currently uses XML-RPC for communication over a network. Once installed Open ERP has a modular structure that allows modules to be added as needed.
+
+1. Introduction 2. Files & Directories 1. __terp__.py 2. __init__.py 3. XML Files 1. Actions 2. Menu Entries 3. Reports 4. Wizards 3. Profiles All the modules are located in the server/addons directory. The following steps are necessary to create a new module: create a subdirectory in the server/addons directory create a module description file: __terp__.py create the Python file containing the objects create .xml files that download the data (views, menu entries, demo data, ...) optionally create reports, wizards or workflows. The Modules - Files And Directories - XML Files XML files located in the module directory are used to modify the structure of the database. They are used for many purposes, among which we can cite : initialization and demonstration data declaration, views declaration, reports declaration, wizards declaration, workflows declaration. General structure of Tiny ERP XML files is more detailed in the section Data Loading Files XML. Look here if you are interested in learning more about initialization and demonstration data declaration XML files. The following section are only related to XML specific to actions, menu entries, reports, wizards and workflows declaration.
+
+Basically four files are necessary to develop a module; 1. 2. 3. 4. __init.py__ __terp.py__ module.py(class file) custom_view.xml(interface file)
+
+Note – Only __init.py and __terp.py are default names used. But module.py and custom_view.xml files can be changed according to the module work. Let us develop simple city module. Sample programming lines are given below and its description of each files will be explained later. __init.py__ import module __terp.py__
+{ "name" : "City Details", "author" : "Softapps", "version" : "1.1", "depends" : ["base"], "init_xml" : [], "update_xml" : [ "custom_view.xml", ], "category" : "Intranet", "active": False, "installable": True }
+
+module.py
+from osv import fields,osv class gp_website_country(osv.osv): _name = 'gp.website.country' _description = "Country Management" _columns = { 'name':fields.char('Country' , size=64,required=True), 'active':fields.boolean('Status'), } _defaults={ 'active': lambda *a: True } gp_website_country()
+
+custom_view .xml
+<?xml version="1.0" encoding="utf-8" ?> - <openerp> - <data> <menuitem icon="terp-sale" id="menu_group_website_root" name="GPL Website" /> #####form view - <record id="view_city_form" model="ir.ui.view"> <field name="name">view_city_form</field> <field name="model">gp.website.city</field> <field name="type">form</field> - <field name="arch" type="xml"> - <form string="City Management"> <field name="country_id" required="1" select="1" /> <field name="state_id" required="1" select="1" /> <field name="name" required="1" /> <field name="active" select="1" /> </form> </field> </record> #####tree view - <record id="view_city_tree" model="ir.ui.view"> <field name="name">view_city_tree</field> <field name="model">gp.website.city</field> <field name="type">tree</field> <field name="arch" type="xml"> - <tree string="City Management"> <field name="country_id" /> <field name="state_id" /> <field name="name" required="1" /> <field name="active" select="1" /> </tree> </record> ##### action - <record id="action_city_form" model="ir.actions.act_window"> <field name="name">Add City</field> <field name="type">ir.actions.act_window</field> <field name="res_model">gp.website.city</field> <field name="view_type">form</field> <field name="view_mode">tree,form</field> </record> <menuitem action="action_city_form" id="menu_gp_city" name="City Management" parent="menu_group_website_root" sequence="1" /> </data> </opener>
+
+Python Module Descriptor File __init__.py The __init__.py file The __init__.py file is, like any Python module, executed at the start of the program. It needs to import the Python files that need to be loaded. So, if you create a “module.py” file, containing the description of your objects, you have to write one line in __init__.py:
+import module
+
+OpenERP Module Descriptor File __terp__.py In the created module directory, you must add a __terp__.py file. This file, which must be in Python format, is responsible to 1. determine the XML files that will be parsed during the initialization of the server, and also to 2. determine the dependencies of the created module. This file must contain a Python dictionary with the following values: name The (Plain English) name of the module. version The version of the module. description The module description (text). author The author of the module. website The website of the module. license The license of the module (default:GPL-2).
+
+depends List of modules on which this module depends. The base module must almost always be in the dependencies because some necessary data for the views, reports, ... are in the base module. init_xml List of .xml files to load when the server is launched with the “–init=module” argument. Filepaths must be relative to the directory where the module is. Open ERP XML File Format is detailed in this section. update_xml List of .xml files to load when the server is launched with the “–update=module” launched. Filepaths must be relative to the directory where the module is. Open ERP XML File Format is detailed in this section. installable True or False. Determines if the module is installable or not. active True or False (default: False). Determines the modules that are installed on the database creation. Example Here is an example of __terp__.py file for the product module
+{ "name" : "Products & Pricelists", "version" : "1.1", "author" : "Open", "category" : "Generic Modules/Inventory Control", "depends" : ["base", "account"], "init_xml" : [], "demo_xml" : ["product_demo.xml"], "update_xml" : ["product_data.xml", "product_report.xml", "product_wizard.xml", "product_view.xml", "pricelist_view.xml"], "installable": True, "active": True }
+
+The files that must be placed in init_xml are the ones that relate to the workflow definition, data to load at the installation of the software and the data for the demonstrations. The files in update_xml concern: views, reports and wizards.
+
+OpenERP Objects All the ERP‟s pieces of data are accessible through “objects”. As an example, there is a res.partner object to access the data concerning the partners, an account.invoice object for the data concerning the invoices, etc... Please note that there is an object for every type of resource, and not an object per resource. We have thus a res.partner object to manage all the partners and not a res.partner object per partner. If we talk in “object oriented” terms, we could also say that there is an object per level. The direct consequences is that all the methods of objects have a common parameter: the “ids” parameter. This specifies on which resources (for example, on which partner) the method must be applied. Precisely, this parameter contains a list of resource ids on which the method must be applied. For example, if we have two partners with the identifiers 1 and 5, and we want to call the res_partner method “send_email”, we will write something like:
+res_partner.send_email(... , [1, 5], ...)
+
+We will see the exact syntax of object method calls further in this document. In the following section, we will see how to define a new object. Then, we will check out the different methods of doing this. For developers: Open ERP “objects” are usually called classes in object oriented programming. A Open ERP “resource” is usually called an object in OO programming, instance of a class. It‟s a bit confusing when you try to program inside Open ERP, because the language used is Python, and Python is a fully object oriented language, and has objects and instances ... Luckily, an Open ERP “resource” can be converted magically into a nice Python object using the “browse” class method (Open ERP object method).
+
+Models- ORM
+
+ORM is for Object-Relational Mapping. OpenERP modeling is based on “objects” but its data is stored in a classical relational database named Postgresql. ORM job is to fill the gap between Open-objects and sql tables. Python is the programming langage giving the behavior and data description of Open-objects (This is not stored in the database). “ORM” is the python class ancestor of all Open-objects. A Open-object is modeling by a static python description for his behavior and data, an a miror sql description for his data storage.
+
+OpenERP Object Attributes
+To define a new object, you have to define a new Python class then instantiate it. This class must inherit from the osv class in the osv module. Object Definition The first line of the object definition will always be of the form:
+class name_of_the_object(osv.osv): _name = 'name.of.the.object' _columns = { ... } ... name_of_the_object()
+
+An object is defined by declaring some fields with predefined names in the class. Two of them are required (_name and _columns), the rest are optional. The predefined fields are: _auto Determines whether a corresponding PostgreSQL table must be generated automatically from the object. Setting _auto to False can be useful in case of Open ERP objects generated from PostgreSQL views. See the “Reporting From PostgreSQL Views” section for more details. _columns (required) The object fields. See the fields section for further details. _constraints The constraints on the object. See the constraints section for details. _sql_constraints The SQL Constraint on the object. See the SQL constraints section for further details.
+
+_defaults The default values for some of the object‟s fields. See the default value section for details. _inherit The name of the osv object which the current object inherits from. See the object inheritance section (first form) for further details. _inherits The list of osv objects the object inherits from. This list must be given in a python dictionary of the form: {„name_of_the_parent_object‟: „name_of_the_field‟, ...}. See the object inheritance section (second form) for further details. Default value: {}. _log_access Determines whether or not the write access to the resource must be logged. If true, four fields will be created in the SQL table: create_uid, create_date, write_uid, write_date. Those fields represent respectively the id of the user who created the record, the creation date of record, the id of the user who last modified the record, and the date of that last modification. This data may be obtained by using the perm_read method. _name (required) Name of the object. Default value: None. _order Name of the fields used to sort the results of the search and read methods. Default value: „id‟. Examples:
+_order = "name" _order = "date_order desc"
+
+_rec_name Name of the field in which the name of every resource is stored. Default value: „name‟. Note: by default, the name_get method simply returns the content of this field. _sequence Name of the SQL sequence that manages the ids for this object. Default value: None. _sql SQL code executed upon creation of the object (only if _auto is True). It means this code gets executed after the table is created. _table Name of the SQL table. Default value: the value of the _name field above with the dots ( . ) replaced by underscores ( _ ).
+
+Types of fields boolean: A boolean (true, false). Syntax:
+fields.boolean('Field Name' [, Optional Parameters]),
+
+integer: An integer. Syntax:
+fields.integer('Field Name' [, Optional Parameters]),
+
+float: A floating point number. Syntax:
+fields.float('Field Name' [, Optional Parameters]),
+
+Note The optional parameter digits defines the precision and scale of the number. The scale being the number of digits after the decimal point whereas the precision is the total number of significant digits in the number (before and after the decimal point). If the parameter digits is not present, the number will be a double precision floating point number. Warning: these floating-point numbers are inexact (not any value can be converted to its binary representation) and this can lead to rounding errors. You should always use the digits parameter for monetary amounts. Example:
+'rate' : fields.float('Relative Change rate', digits=(12,6) [, Optional Parameters]),
+
+char: A string of limited length. The required size parameter determines its size. Syntax:
+fields.char('Field Name', size=n [, Optional Parameters]), # where ''n'' is an integer.
+
+Example:
+'city' : fields.char('City Name', size=30, required=True),
+
+text: A text field with no limit in length. Syntax:
+fields.text('Field Name' [, Optional Parameters]),
+
+date: A date. Syntax:
+fields.date('Field Name' [, Optional Parameters]),
+
+datetime: Allows to store a date and the time of day in the same field. Syntax:
+fields.datetime('Field Name' [, Optional Parameters]),
+
+binary: A binary chain selection: A field which allows the user to make a selection between various predefined values. Syntax:
+fields.selection((('n','Unconfirmed'), ('c','Confirmed')), 'Field Name' [, Optional Parameters]),
+
+Note Format of the selection parameter: tuple of tuples of strings of the form:
+(('key_or_value', 'string_to_display'), ... )
+
+Example Using relation fields many2one with selection. In fields definitions add:
+
+..., 'my_field': fields.many2one('mymodule.relation.model', 'Title', selection=_sel_func), ...,
+
+And then define the _sel_func like this (but before the fields definitions):
+def _sel_func(self, cr, uid, context=None): obj = self.pool.get('mymodule.relation.model') ids = obj.search(cr, uid, []) res = obj.read(cr, uid, ids, ['name', 'id'], context) res = [(r['id'], r['name']) for r in res] return res
+
+Relational Types
+A one2one field expresses a one:to:one relation between two objects. It is deprecated. Use many2one instead. one2one: Syntax:
+fields.one2one('other.object.name', 'Field Name')
+
+Associates this object to a parent object via this Field. For example Department an Employee belongs to would Many to one. i.e Many employees will belong to a Department
+
+Syntax:
+fields.many2one('other.object.name', 'Field Name', optional parameter)
+
+many2one:
+
+* Optional parameters: - ondelete: What should happen when the resource this field points to is deleted. + Predefined value: "cascade", "set null", "restrict", "no action", "set default" + Default value: "set null" - required: True - readonly: True - select: True - (creates an index on the Foreign Key field)
+
+Example
+'commercial': fields.many2one('res.users', 'Commercial', ondelete='cascade'),
+
+one2many: Syntax:
+fields.one2many('other.object.name', 'Field relation id', 'Fieldname', optional parameter) * Optional parameters: - invisible: True/False - states: ? - readonly: True/False
+
+Example
+'address': fields.one2many('res.partner.address', 'partner_id', 'Contacts'),
+
+many2many: Syntax:
+fields.many2many('other.object.name', 'relation object', 'actual.object.id', 'other.object.id', 'Field Name')
+
+Where
+o o o
+
+other.object.name is the other object which belongs to the relation relation object is the table that makes the link actual.object.id and other.object.id are the fields‟ names used in the relation table
+
+Example:
+'category_ids': fields.many2many( 'res.partner.category', 'res_partner_category_rel', 'partner_id', 'category_id', 'Categories'),
+
+To make it bidirectionnal (= create a field in the other object):
+class other_object_name2(osv.osv): _inherit = 'other.object.name' _columns = { 'other_fields': fields.many2many('actual.object.name', 'relation object', 'actual.object.id', 'other.object.id', 'Other Field Name'), } other_object_name2()
+
+Example:
+class res_partner_category2(osv.osv): _inherit = 'res.partner.category' _columns = { 'partner_ids': fields.many2many('res.partner', 'res_partner_category_rel', 'category_id', 'partner_id', 'Partners'), } res_partner_category2()
+
+Sometimes you need to refer the relation of a relation. For example, supposing you have objects: City <- State <- Country, and you need to refer Country in a City, you can define a field as below in the City object:
+'country_id': fields.related('state_id', 'country_id', type="many2one", relation="module.country", string="Country", store=False)
+
+Functional Field A functional field is a field whose value is calculated by a function (rather than being stored in the database). Parameters:
+fnct, arg=None, fnct_inv=None, fnct_inv_arg=None, type="float", fnct_search=None, obj=None, method=False, store=True
+
+where type is the field type name returned by the function. It can be any field type name except function. store If you want to store field in database or not. Default is False. method whether the field is computed by a method (of an object) or a global function fnct is the function or method that will compute the field value. It must have been declared before declaring the functional field. If method is True, the signature of the method must be:
+def fnct(self, cr, uid, ids, field_name, arg, context)
+
+otherwise (if it is a global function), its signature must be:
+def fnct(cr, table, ids, field_name, arg, context)
+
+Either way, it must return a dictionary of values of the form {id‟_1_‟: value‟_1_‟, id‟_2_‟: value‟_2_‟,...}.
+
+The values of the returned dictionary must be of the type specified by the type argument in the field declaration. fnct_inv is the function or method that will allow writing values in that field. If method is true, the signature of the method must be:
+def fnct(self, cr, uid, ids, field_name, field_value, arg, context)
+
+otherwise (if it is a global function), it should be:
+def fnct(cr, table, ids, field_name, field_value, arg, context)
+
+fnct_search allows you to define the searching behaviour on that field. If method is true, the signature of the method must be:
+def fnct(self, cr, uid, obj, name, args)
+
+otherwise (if it is a global function), it should be:
+def fnct(cr, uid, obj, name, args)
+
+The return value is a list countaining 3-part tuplets which are used in search funtion:
+return [('id','in',[1,3,5])]
+
+Example Of Functional Field:
+
+Suppose we create a contract object which is :
+class hr_contract(osv.osv): _name = 'hr.contract' _description = 'Contract' _columns = { 'name' : fields.char('Contract Name', size=30, required=True), 'employee_id' : fields.many2one('hr.employee', 'Employee', required=True), 'function' : fields.many2one('res.partner.function', 'Function'), } hr_contract()
+
+If we want to add a field that retrieves the function of an employee by looking its current contract, we use a functional field. The object hr_employee is inherited this way:
+class hr_employee(osv.osv): _name = "hr.employee" _description = "Employee" _inherit = "hr.employee"
+
+_columns = { 'contract_ids' : fields.one2many('hr.contract', 'employee_id', 'Contracts'), 'function' : fields.function(_get_cur_function_id, type='many2one', obj="res.partner.function", method=True, string='Contract Function'), } hr_employee()
+
+Note three points type =‟many2one‟ is because the function field must create a many2one field; function is declared as a many2one in hr_contract also. obj =”res.partner.function” is used to specify that the object to use for the many2one field is res.partner.function. We called our method _get_cur_function_id because its role is to return a dictionary whose keys are ids of employees, and whose corresponding values are ids of the function of those employees. The code of this method is:
+def _get_cur_function_id(self, cr, uid, ids, field_name, arg, context): for i in ids: #get the id of the current function of the employee of identifier "i" sql_req= """ SELECT f.id AS func_id FROM hr_contract c LEFT JOIN res_partner_function f ON (f.id = c.function) WHERE (c.employee_id = %d) """ % (i,) cr.execute(sql_req) sql_res = cr.dictfetchone() if sql_res: #The employee has one associated contract res[i] = sql_res['func_id'] else: #res[i] must be set to False and not to None because of XML:RPC # "cannot marshal None unless allow_none is enabled" res[i] = False return res
+
+The id of the function is retrieved using a SQL query. Note that if the query returns no result, the value of sql_res[„func_id‟] will be None. We force the False value in this case value because XML:RPC (communication between the server and the client) doesn‟t allow to transmit this value.
+
+store={...} Enhancement:
+
+It will compute the field depends on other objects. store={„object_name‟:(function_name,[„field_name1‟,‟field_name2‟],priority)} It will call function function_name when any changes will be applied on field list Syntax: [„field1‟,‟field2‟] on object „object_name‟ and output of the function will send as a parameter for main function of the field. Example In membership module:
+'membership_state': fields.function(_membership_state, method=True, string='Current membership state', type='selection', selection=STATE, store={'account.invoice':(_get_invoice_partner,['state'], 10), 'membership.membership_line':(_get_partner_id,['state'], 10), 'res.partner': (lambda self,cr,uid,ids,c={}:ids, ['free_member'], 10)}),
+
+Property Fields¶
+Declaring a property
+
+A property is a special field: fields.property.
+class res_partner(osv.osv): _name = "res.partner" _inherit = "res.partner" _columns = { 'property_product_pricelist': fields.property( 'product.pricelist', type='many2one', relation='product.pricelist', string="Sale Pricelist", method=True, view_load=True, group_name="Pricelists Properties"), }
+
+Then you have to create the default value in a .XML file for this property:
+<record model="ir.property" id="property_product_pricelist"> <field name="name">property_product_pricelist</field> <field name="fields_id" search="[('model','=','res.partner'), ('name','=','property_product_pricelist')]"/> <field name="value" eval="'product.pricelist,'+str(list0)"/>
+
+</record>
+
+Tip if the default value points to a resource from another module, you can use the ref function like this: <field name=”value” eval=“„product.pricelist,‟+str(ref(„module.data_id‟))”/> Putting properties in forms To add properties in forms, just put the <properties/> tag in your form. This will automatically add all properties fields that are related to this object. The system will add properties depending on your rights. (some people will be able to change a specific property, others won‟t). Properties are displayed by section, depending on the group_name attribute. (It is rendered in the client like a separator tag). How does this work ? The fields.property class inherits from fields.function and overrides the read and write method. The type of this field is many2one, so in the form a property is represented like a many2one function. But the value of a property is stored in the ir.property class/table as a complete record. The stored value is a field of type reference (not many2one) because each property may point to a different object. If you edit properties values (from the administration menu), these are represented like a field of type reference. When you read a property, the program gives you the property attached to the instance of object you are reading. If this object has no value, the system will give you the default property. The definition of a property is stored in the ir.model.fields class like any other fields. In the definition of the property, you can add groups that are allowed to change to property. Using properties or normal fields When you want to add a new feature, you will have to choose to implement it as a property or as normal field. Use a normal field when you inherit from an object and want to extend this object. Use a property when the new feature is not related to the object but to an external concept. Here are a few tips to help you choose between a normal field or a property: Normal fields extend the object, adding more features or data.
+
+A property is a concept that is attached to an object and have special features: Different value for the same property depending on the company Rights management per field It‟s a link between resources (many2one) Example 1: Account Receivable The default “Account Receivable” for a specific partner is implemented as a property because: This is a concept related to the account chart and not to the partner, so it is an account property that is visible on a partner form. Rights have to be managed on this fields for accountants, these are not the same rights that are applied to partner objects. So you have specific rights just for this field of the partner form: only accountants may change the account receivable of a partner. This is a multi-company field: the same partner may have different account receivable values depending on the company the user belongs to. In a multi-company system, there is one account chart per company. The account receivable of a partner depends on the company it placed the sale order. The default account receivable is the same for all partners and is configured from the general property menu (in administration). Note One interesting thing is that properties avoid “spaghetti” code. The account module depends on the partner (base) module. But you can install the partner (base) module without the accounting module. If you add a field that points to an account in the partner object, both objects will depend on each other. It‟s much more difficult to maintain and code (for instance, try to remove a table when both tables are pointing to each others.) Example 2: Product Times The product expiry module implements all delays related to products: removal date, product usetime, ... This module is very useful for food industries. This module inherits from the product.product object and adds new fields to it:
+class product_product(osv.osv): _inherit = 'product.product' _name = 'product.product' _columns = { 'life_time': fields.integer('Product lifetime'), 'use_time': fields.integer('Product usetime'), 'removal_time': fields.integer('Product removal time'), 'alert_time': fields.integer('Product alert time'), }
+
+product_product()
+
+This module adds simple fields to the product.product object. We did not use properties because: We extend a product, the life_time field is a concept related to a product, not to another object. We do not need a right management per field, the different delays are managed by the same people that manage all products. ORM methods
+create
+
+Description: Create a new resource Signature: def create(cr, uid, vals, context=None) Parameters: vals: a dictionary of values for every field. This dictionary must use this form: {„name_of_the_field‟: value, ...} context (optional, highly recommended): the actual context dictionary. Returns: the id of the newly created resource. Example:
+id = pooler.get_pool(cr.dbname).get('res.partner.event').create(cr, uid, {'name': 'Email sent through mass mailing', 'partner_id': partner.id, 'description': 'The Description for Partner Event', }, context=my_context) search
+
+Description: Search all the resources which satisfy certain criteria Signature: def search(self, cr, uid, args, offset=0, limit=2000, order=None, context=None, count=False) Parameters args: a list of tuples containing the search criteria. This list must be of the form: [(„name_of_the_field‟, „operator‟, value), ...]. The available operators are:
+
+=, >, <, <=, >= IN (sql) LIKE, ILIKE (sql) child_of offset (optional): do not return the “offset” first results. limit (optional): maximum number of results to return. context (optional, highly recommended): the actual context dictionary. Returns: the list of ids of matching resources. Example:
+ids = pooler.get_pool(cr.dbname).get('res.partner').search(cr, uid, [('category_id', '=', 'Customer')], context=my_context)
+
+o o o o
+
+This example will return a list with all the partners that have the category „Customer‟.
+read
+
+Description: List of fields resources values. Signature: def read(self, cr, uid, ids, fields=None, context=None) Parameters: ids: list of the identifiers of the resources to read (list of integers). fields (optional): the list of the interested fields. If a value is not provided for this parameter, the function will check all the fields. context (optional, highly recommended): the actual context dictionary. Returns: A list of dictionaries (a dictionary per resource asked) of the form [{„name_of_the_field‟: value, ...}, ...] Example:
+values = pooler.get_pool(cr.dbname).get('res.partner').read(cr, uid, ids, ['name','category_id'], context=my_context) browse
+
+Description: Return one or several resources with the objects form. These object fields can be reached directly with the pointed notation (“object.name_of_the_field”). The “relations” fields are also automatically evaluated to allow you to recover the values in the “neighbors” objects. Signature: def browse(self, cr, uid, select, offset=0, limit=2000, context=None)
+
+Parameters select: this parameter accept data of several types: o an integer : identifier of a resource o a list of integers (list of identifiers) offset (optional): the number of results to pass. limit (optional): the maximum number of results to return. context (optional, highly recommended): the actual context dictionary. Returns: if an integer (identifier) has been passed as select parameter, return an object having the properties described here above. if a list of integer (identifiers) has been passed, return the object list. Example: Let‟s consider the case of a partner (object „res.partner‟) and of a partner contact (object „res.partner.address‟). Let‟s suppose that we know the identifier of a partner contact (name contact_id) and we want to recover his name and the account number of the company he works for. Knowing that the object res.partner contains the field:
+'bank':fields.char('Bank account',size=64),
+
+and the object res.partner.address contains the fields:
+'partner_id': fields.many2one('res.partner', 'Partner', required=True), 'name': fields.char('Contact Name', size=64),
+
+the most simple way to proceed is to use the browse method:
+addr_obj = self.pool.get('res.partner.address').browse(cr, uid, contact_id)
+
+so, to recover the two fields that interest us, you have to write:
+name = addr_obj.name account_num = addr_obj.partner_id.bank
+
+Note This method is only useful locally (on the server itself) and not with the other interfaces !!
+write
+
+Description:
+
+Writes values in one or several fields of one or several resources Signature: def write(self, cr, uid, ids, vals, context=None) Parameters: ids: the resources identifiers list to modify. vals: a dictionary with values to write. This dictionary must be with the form: {„name_of_the_field‟: value, ...}. context (optional, highly recommended): the actual context dictionary. Returns: True Example:
+self.pool.get('sale.order').write(cr, uid, ids, {'state':'cancel'}, context=my_context) unlink
+
+Description: Delete one or several resources Signature: def unlink(self, cr, uid, ids, context=None) Parameters: ids: the identifiers resources list to delete. context (optional, highly recommended): the actual context dictionary. Returns: True Example:
+self.pool.get('sale.order').unlink(cr,uid, ids, context=my_context)
+
+Methods to manipulate the default values¶
+default_get
+
+Description: Get back the value by default for one or several fields. Signature: def default_get(self, cr, uid, fields, form=None, reference=None) Parameters: fields: the fields list which we want to recover the value by default. form (optional): TODO
+
+reference (optional): TODO Returns: dictionary of the default values of the form {„field_name‟: value, ... } Example:
+self.pool.get('hr.analytic.timesheet').default_get(cr, uid, ['product_id','product_uom_id']) default_set
+
+Description: Change the default value for one or several fields. Signature: def default_set(self, cr, uid, field, value, for_user=False) Parameters: field: the name of the field that we want to change the value by default. value: the value by default. for_user (optional): boolean that determines if the new default value must be available only for the current user or for all users. Returns: True Example:
+TODO
+
+Methods to manipulate the permissions
+perm_read
+
+Signature: def perm_read(self, cr, uid, ids) Parameters: ids: an integer list Returns: a list of dictionaries with the following keys Description: level : access level uid : user id gid : group id create_uid: user who created the resource create_date: date when the resource was created write_uid: last user who changed the resource write_date: date of the last change to the resource
+
+perm_write
+
+Signature: def perm_write(self, cr, user, ids, fields, context=None) Parameters: Description: context (optional, highly recommended): the actual context dictionary. Returns: Example:
+self.pool.get('res.partner').perm_read(cr, uid, ids, context=my_context)
+
+Methods to generate the fields and the views
+fields_get
+
+Signature: def fields_get(self, cr, uid, fields = None, context=None) Parameters: Description: fields: a list of fields that interest us, if None, all the fields context (optional, highly recommended): the actual context dictionary. Result: Example: In payment.line in account_payment module
+def fields_get(self, cr, uid, fields=None, context=None): res = super(payment_line, self).fields_get(cr, uid, fields, context) if 'communication2' in res: res['communication2'].setdefault('states', {}) res['communication2']['states']['structured'] = [('readonly', True)] res['communication2']['states']['normal'] = [('readonly', False)] return res
+
+fields_view_get
+
+Signature: def fields_view_get(self, cr, uid, view_id=None, view_type=‟form‟, context=None, toolbar=False) Parameters: Description: context (optional, highly recommended): the actual context dictionary. Result: Example: In membership module [product.product]:
+def fields_view_get(self, cr, user, view_id=None, view_type='form', context=None, toolbar=False): if ('product' in context) and (context['product']=='membership_product'): model_data_ids_form = self.pool.get('ir.model.data'). search(cr, user, [('model', '=', 'ir.ui.view'), ('name', 'in', ['membership_products_form', 'membership_products_tree'])]) resource_id_form = self.pool.get('ir.model.data'). read(cr,user,model_data_ids_form,fields=['res_id','name']) dict_model={} for i in resource_id_form: dict_model[i['name']]=i['res_id'] if view_type=='form': view_id = dict_model['membership_products_form'] else: view_id = dict_model['membership_products_tree'] return super(Product,self).fields_view_get(cr, user, view_id, view_type, context, toolbar) distinct_field_get
+
+Signature: def distinct_field_get(self, cr, uid, field, value, args=None, offset=0, limit=2000) Description: Parameters: Result: Example:
+TODO
+
+Methods concerning the name of the resources
+name_get
+
+Signature: def name_get(self, cr, uid, ids, context=None) Description: Parameters: Result: a list of tuples of the form [(id, name), ...] Example: In res.partner.address:
+def name_get(self, cr, user, ids, context={}): if not len(ids): return [] res = [] for r in self.read(cr, user, ids, ['name','zip','city']): addr = str(r['name'] or '') if r['name'] and (r['zip'] or r['city']): addr += ', ' addr += str(r['zip'] or '') + ' ' + str(r['city'] or '') res.append((r['id'], addr)) return res name_search
+
+Signature: def name_search(self, cr, uid, name=‟„, args=None, operator=‟ilike‟, context=None) Description: „Parameters: Result: Example: In res.country:
+def name_search(self, cr, user, name='', args=None, operator='ilike', context=None, limit=80): if not args: args=[] if not context: context={} ids = False if len(name) == 2: ids = self.search(cr, user, [('code', '=', name)] + args, limit=limit, context=context)
+
+if not ids: ids = self.search(cr, user, [('name', operator, name)] + args, limit=limit, context=context) return self.name_get(cr, user, ids, context)
+
+Views and Events
+Views describe how each object (type of resource) is displayed. More precisely, for each object, we can define one (or several) view(s) to describe which fields should be drawn and how. There are two types of views: 1. form views 2. tree views
+
+Form views
+The field disposition in a form view always follows the same principle. Fields are distributed on the screen following the rules below: By default, each field is preceded by a label, with its name. Fields are placed on the screen from left to right, and from top to bottom, according to the order in which they are declared in the view. Every screen is divided into 4 columns, each column being able to contain either a label, or an “edition” field. As every edition field is preceded (by default) by a label with its name, there will be two fields (and their respective labels) on each line of the screen. The green and red zones on the screen-shot below, illustrate those 4 columns. They designate respectively the labels and their corresponding fields.
+
+Views also support more advanced placement options: A view field can use several columns. For example, on the screen-shot below, the zone in the blue frame is, in fact, the only field of a “one to many”. We will come back later on this note, but let‟s note that it uses the whole width of the screen and not only one column. We can also make the opposite operation: take a columns group and divide it in as many columns as desired. The surrounded green zones of the screen above are good examples. Precisely, the green framework up and on the right side takes the place of two columns, but contains 4 columns. As we can see below in the purple zone of the screen, there is also a way to distribute the fields of an object on different tabs.
+
+Tree views
+These views are used when we work in list mode (in order to visualize several resources at once) and in the search screen. These views are simpler than the form views and thus have less options.
+
+Design Elements
+The common structure to all the XML files of Tiny ERP is described in the DataLoadXML “Data Loading Using XML Files” section The files describing the views are also of the form: Example:
+<?xml version="1.0"?> <openerp> <data> [view definitions] </data> </openerp>
+
+The view definitions contain mainly three types of tags: <record> tags with the attribute model=”ir.ui.view”, which contain the view definitions themselves <record> tags with the attribute model=”ir.actions.act_window”, which link actions to these views <menuitem> tags, which create entries in the menu, and link them with actions New : You can precise groups for whom the menu is accessible using the groups attribute in menuitem tag. New : You can now add shortcut using the shortcut tag. Example:
+<shortcut name="Draft Purchase Order (Proposals)" model="purchase.order" logins="demo" menu="m"/>
+
+Note that you should add an id attribute on the menuitem which is refered by menu attribute.
+<record model="ir.ui.view" id="v"> <field name="name">sale.order.form</field> <field name="model">sale.order</field> <field name="priority" eval="2"/> <field name="arch" type="xml"> <form string="Sale Order"> ......... </form> </field> </record>
+
+Default value for the priority field : 16. When not specified the system will use the view with the lower priority.
+
+Grouping Elements
+Separator¶ Adds a separator line Example:
+<separator string="Links" colspan="4"/>
+
+The string attribute defines its label and the colspan attribute defines his horizontal size (in number of columns). Notebook <notebook>: With notebooks you can distribute the view fields on different tabs (each one defined by a page tag). You can use the tabpos properties to set tab at: up, down, left, right. Example:
+<notebook colspan="4">....</notebook>
+
+Group <group>: groups several columns and split the group in as many columns as desired. colspan: the number of columns to use rowspan: the number of rows to use expand: if we should expand the group or not col: the number of columns to provide (to its children) string: (optional) If set, a frame will be drawn around the group of fields, with a label containing the string. Otherwise, the frame will be invisible. Example:
+<group col="3" colspan="2"> <field name="invoiced" select="2"/> <button colspan="1" name="make_invoice" states="confirmed" string="Make Invoice" type="object"/> </group>
+
+Page Defines a new notebook page for the view. Example:
+<page string="Order Line"> ... </page>:
+
+string: defines the name of the page.
+
+Data Elements
+Field attributes for the “field” tag select=”1”: mark this field as being one of the research criteria for this resource search view. colspan=”4”: the number of columns on which a field must extend. readonly=”1”: set the widget as read only required=”1”: the field is marked as required. If a field is marked as required, a user has to fill it the system won‟t save the resource if the field is not filled. This attribute supersede the required field value defined in the object. nolabel=”1”: hides the label of the field (but the field is not hidden in the search view). invisible=”True”: hides both the label and the field. password=”True”: replace field entry by asterisk, “*”. string=”“: change the field label. Note that this label is also used in the search view: see select attribute above). domain: can restrict the domain. o Example: domain=”[(„partner_id‟,‟=‟,partner_id)]” widget: can change the widget. o Example: widget=”one2many_list”  one2one_list  one2many_list  many2one_list  many2many  url  email  image  float_time  reference mode: sequences of the views when switching. o Example: mode=”tree,graph” on_change: define a function that is called when the content of the field changes. o Example: on_change=”onchange_partner(type,partner_id)” o See ViewsSpecialProperties for details attrs: Permits to define attributes of a field depends on other fields of the same window. (It can be use on page, group, button and notebook tag also) o Format: “{„attribute‟:[(„field_name‟,‟operator‟,‟value‟),(„field_name‟,‟operator‟,‟value‟)], ‟attribute2‟:[(„field_name‟,‟operator‟,‟value‟),]}” o where attribute will be readonly, invisible, required o Default value: {}. o Example: (in product.product)
+
+<field digits="(14, 3)" name="volume" attrs="{'readonly':[('type','=','service')]}"/>
+
+eval: evaluate the attribute content as if it was Python code (see below for example) Example Here‟s the source code of the view of a sale order object. This is the same object as the object shown on the screen shots of the presentation. Example:
+<?xml version="1.0"?> <openerp> <data> <record id="view_partner_form" model="ir.ui.view"> <field name="name">res.partner.form</field> <field name="model">res.partner</field> <field name="type">form</field> <field name="arch" type="xml"> <form string="Partners"> <group colspan="4" col="6"> <field name="name" select="1"/> <field name="ref" select="1"/> <field name="customer" select="1"/> <field domain="[('domain', '=', 'partner')]" name="title"/> <field name="lang" select="2"/> <field name="supplier" select="2"/> </group> <notebook colspan="4"> <page string="General"> <field colspan="4" mode="form,tree" name="address" nolabel="1" select="1"> <form string="Partner Contacts"> <field name="name" select="2"/> <field domain="[('domain', '=', 'contact')]" name="title"/> <field name="function"/> <field name="type" select="2"/> <field name="street" select="2"/> <field name="street2"/> <newline/> <field name="zip" select="2"/> <field name="city" select="2"/> <newline/> <field completion="1" name="country_id" select="2"/> <field name="state_id" select="2"/> <newline/> <field name="phone"/> <field name="fax"/> <newline/> <field name="mobile"/> <field name="email" select="2" widget="email"/>
+
+</form> <tree string="Partner Contacts"> <field name="name"/> <field name="zip"/> <field name="city"/> <field name="country_id"/> <field name="phone"/> <field name="email"/> </tree> </field> <separator colspan="4" string="Categories"/> <field colspan="4" name="category_id" nolabel="1" select="2"/> </page> <page string="Sales &amp; Purchases"> <separator string="General Information" colspan="4"/> <field name="user_id" select="2"/> <field name="active" select="2"/> <field name="website" widget="url"/> <field name="date" select="2"/> <field name="parent_id"/> <newline/> </page> <page string="History"> <field colspan="4" name="events" nolabel="1" widget="one2many_list"/> </page> <page string="Notes"> <field colspan="4" name="comment" nolabel="1"/> </page> </notebook> </form> </field> </record> <menuitem action="action_partner_form" id="menu_partner_form" parent="base.menu_base_partner" sequence="2"/> </data> </openerp>
+
+The eval attribute¶ The eval attribute evaluate its content as if it was Python code. This allows you to define values that are not strings. Normally, content inside <field> tags are always evaluated as strings.
+Example 1: <field name="value">2.3</field> This will evaluate to the string '2.3' and not the float 2.3 Example 2:<field name="value">False</field>
+
+This will evaluate to the string 'False' and not the boolean False If you want to evaluate the value to a float, a boolean or another type, except string, you need to use the eval attribute:
+<field name="value" eval="2.3" /> <field name="value" eval="False" />
+
+Button <button/>: add a button using the string attribute as label. When clicked, it can trigger methods on the object, workflow transitions or actions (reports, wizards, ...). string: define the button‟s label confirm: the message for the confirmation window, if needed. Eg: confirm=”Are you sure?” name: the name of the function to call when the button is pressed. In the case it‟s an object function, it must take 4 arguments: cr, uid, ids, o cr is a database cursor o uid is the userID of the user who clicked the button o ids is the record ID list o **args is a tuple of additional arguments states: a comma-separated list of states (from the state field or from the workflow) in which the button must appear. If the states attribute is not given, the button is always visible. type: this attribute can have 3 values o “workflow” (value by default): the function to call is a function of workflow o “object”: the function to call is a method of the object o “action”: call an action instead of a function Example:
+<button name="order_confirm" states="draft" string="Confirm Order" icon="gtkexecute"/>
+
+Label Adds a simple label using the string attribute as caption. Example:
+<label string="Test"/>
+
+New Line Force a return to the line even if all the columns of the view are not filled in. Example:
+<newline/>
+
+Events
+On Change The on_change attribute defines a method that is called when the content of a view field has changed. This method takes at least arguments: cr, uid, ids, which are the three classical arguments and also the context dictionary. You can add parameters to the method. They must correspond to other fields defined in the view, and must also be defined in the XML with fields defined this way:
+<field name="name_of_field" on_change="name_of_method(other_field'_1_', ..., other_field'_n_')"/>
+
+Getting Defaults Description: Get back the value by default for one or several fields. Signature: def default_get(self, cr, uid, fields, form=None, reference=None) Parameters: fields: the fields list which we want to recover the value by default. form (optional): TODO reference (optional): TODO Returns: dictionary of the default values of the form {„field_name‟: value, ... } Example:
+self.pool.get('hr.analytic.timesheet').default_get(cr, uid, ['product_id','product_uom_id']) default_set
+
+Description: Change the default value for one or several fields. Signature: def default_set(self, cr, uid, field, value, for_user=False) Parameters: field: the name of the field that we want to change the value by default.
+
+value: the value by default. for_user (optional): boolean that determines if the new default value must be available only for the current user or for all users. Returns: True Example:
+TODO
+
+Menus
+Here‟s the template of a menu item :
+<menuitem id="menuitem_id" name="Position/Of/The/Menu/Item/In/The/Tree" action="action_id" icon="NAME_FROM_LIST" groups="groupname" sequence="<integer>"/>
+
+Where id specifies the identifier of the menu item in the menu items table. This identifier must be unique. Mandatory field. name defines the position of the menu item in the menu hierarchy. Elements are separated by slashes (“/”). A menu item name with no slash in its text is a top level menu. Mandatory field. action specifies the identifier of the action that must have been defined in the action table (ir.actions.act_window). Note that this field is not mandatory : you can define menu elements without associating actions to them. This is useful when defining custom icons for menu elements that will act as folders (for example this is how custom icons for “Projects”, “Human Resources” in Open ERP are defined). icon specifies which icon will be displayed for the menu item using the menu item. The default icon is STOCK_OPEN. o The available icons are : STOCK_ABOUT, STOCK_ADD, STOCK_APPLY, STOCK_BOLD, STOCK_CANCEL, STOCK_CDROM, STOCK_CLEAR, STOCK_CLOSE, STOCK_COLOR_PICKER, STOCK_CONNECT, STOCK_CONVERT, STOCK_COPY, STOCK_CUT, STOCK_DELETE, STOCK_DIALOG_AUTHENTICATION, STOCK_DIALOG_ERROR, STOCK_DIALOG_INFO, STOCK_DIALOG_QUESTION, STOCK_DIALOG_WARNING, STOCK_DIRECTORY, STOCK_DISCONNECT, STOCK_DND, STOCK_DND_MULTIPLE, STOCK_EDIT, STOCK_EXECUTE, STOCK_FILE, STOCK_FIND, STOCK_FIND_AND_REPLACE, STOCK_FLOPPY, STOCK_GOTO_BOTTOM, STOCK_GOTO_FIRST, STOCK_GOTO_LAST,
+
+STOCK_GOTO_TOP, STOCK_GO_BACK, STOCK_GO_DOWN, STOCK_GO_FORWARD, STOCK_GO_UP, STOCK_HARDDISK, STOCK_HELP, STOCK_HOME, STOCK_INDENT, STOCK_INDEX, STOCK_ITALIC, STOCK_JUMP_TO, STOCK_JUSTIFY_CENTER, STOCK_JUSTIFY_FILL, STOCK_JUSTIFY_LEFT, STOCK_JUSTIFY_RIGHT, STOCK_MEDIA_FORWARD, STOCK_MEDIA_NEXT, STOCK_MEDIA_PAUSE, STOCK_MEDIA_PLAY, STOCK_MEDIA_PREVIOUS, STOCK_MEDIA_RECORD, STOCK_MEDIA_REWIND, STOCK_MEDIA_STOP, STOCK_MISSING_IMAGE, STOCK_NETWORK, STOCK_NEW, STOCK_NO, STOCK_OK, STOCK_OPEN, STOCK_PASTE, STOCK_PREFERENCES, STOCK_PRINT, STOCK_PRINT_PREVIEW, STOCK_PROPERTIES, STOCK_QUIT,STOCK_REDO, STOCK_REFRESH, STOCK_REMOVE, STOCK_REVERT_TO_SAVED, STOCK_SAVE, STOCK_SAVE_AS, STOCK_SELECT_COLOR, STOCK_SELECT_FONT, STOCK_SORT_ASCENDING, STOCK_SORT_DESCENDING, STOCK_SPELL_CHECK, STOCK_STOP, STOCK_STRIKETHROUGH, STOCK_UNDELETE, STOCK_UNDERLINE, STOCK_UNDO, STOCK_UNINDENT, STOCK_YES, STOCK_ZOOM_100, STOCK_ZOOM_FIT, STOCK_ZOOM_IN, STOCK_ZOOM_OUT, terp-account, terp-crm, terp-mrp, terp-product, terp-purchase, terp-sale, terp-tools, terpadministration, terp-hr, terp-partner, terp-project, terp-report, terp-stock groups specifies which group of user can see the menu item (example : groups=”admin”). See section ” Management of Access Rights” for more information. Multiple groups should be separated by a „,‟ (example: groups=”admin,user”) sequence is an integer that is used to sort the menu item in the menu. The higher the sequence number, the downer the menu item. This argument is not mandatory: if sequence is not specified, the menu item gets a default sequence number of 10. Menu items with the same sequence numbers are sorted by order of creation (_order = “sequence,id“).
+
+<menuitem name="Sales Management/Sales Order/Sales Order in Progress" id="menu_action_order_tree4" action="action_order_tree4"/>
+
+he actions define the behavior of the system in response to the actions of the users ; login of a new user, double-click on an invoice, click on the action button, ... There are different types of simple actions: Window: Opening of a new window Report: The printing of a report o Custom Report: The personalized reports o RML Report: The XSL:RML reports
+
+Wizard: The beginning of a Wizard Execute: The execution of a method on the server side Group: Gather some actions in one group The actions are used for the following events; User connection, The user double-clicks on the menu, The user clicks on the icon „print‟ or „action‟. Example of events In Open ERP, all the actions are described and not configured. Two examples: Opening of a window when double-clicking in the menu User connection Opening of the menu When the user open the option of the menu “Operations > Partners > Partners Contact”, the next steps are done to give the user information on the action to undertake. 1. Search the action in the IR. 2. Execution of the action 1. If the action is the type Opening the Window; it indicates to the user that a new window must be opened for a selected object and it gives you the view (form or list) and the filed to use (only the pro-forma invoice). 2. The user asks the object and receives information necessary to trace a form; the fields description and the XML view. User connection When a new user is connected to the server, the client must search the action to use for the first screen of this user. Generally, this action is: open the menu in the „Operations‟ section. The steps are: 1. Reading of a user file to obtain ACTION_ID 2. Reading of the action and execution of this one
+
+The fields Action Name The action name Action Type Always „ir.actions.act_window‟ View Ref The view used for showing the object Model The model of the object to post Type of View The type of view (Tree/Form) Domain Value The domain that decreases the visible data with this view
+
+The view
+The view describes how the edition form or the data tree/list appear on screen. The views can be of „Form‟ or „Tree‟ type, according to whether they represent a form for the edition or a list/tree for global data viewing. A form can be called by an action opening in „Tree‟ mode. The form view is generally opened from the list mode (like if the user pushes on „switch view‟). The Domain This parameter allows you to regulate which resources are visible in a selected view.(restriction) For example, in the invoice case, you can define an action that opens a view that shows only invoices not paid. The domains are written in python; list of tuples. The tuples have three elements; the field on which the test must be done the operator used for the test (<, >, =, like) the tested value For example, if you want to obtain only „Draft‟ invoice, use the following domain; [(„state‟,‟=‟,‟draft‟)] In the case of a simple view, the domain define the resources which are the roots of the tree. The other resources, even if they are not from a part of the domain will be posted if the user develop the branches of the tree. Actions are explained in more detail in section “Administration Modules - Actions”. Here‟s the template of an action XML record :
+
+<record model="ir.actions.act_window" id="action_id_1"> <field name="name">action.name</field> <field name="view_id" ref="view_id_1"/> <field name="domain">["list of 3-tuples (max 250 characters)"]</field> <field name="context">{"context dictionary (max 250 characters)"}</field> <field name="res_model">Open.object</field> <field name="view_type">form|tree</field> <field name="view_mode">form,tree|tree,form|form|tree</field> <field name="usage">menu</field> <field name="target">new</field> </record>
+
+Where id is the identifier of the action in the table “ir.actions.act_window”. It must be unique. name is the name of the action (mandatory). view_id is the name of the view to display when the action is activated. If this field is not defined, the view of a kind (list or form) associated to the object res_model with the highest priority field is used (if two views have the same priority, the first defined view of a kind is used). domain is a list of constraints used to refine the results of a selection, and hence to get less records displayed in the view. Constraints of the list are linked together with an AND clause : a record of the table will be displayed in the view only if all the constraints are satisfied. context is the context dictionary which will be visible in the view that will be opened when the action is activated. Context dictionaries are declared with the same syntax as Python dictionaries in the XML file. For more information about context dictionaries, see section ” The context Dictionary”. res_model is the name of the object on which the action operates. view_type is set to form when the action must open a new form view, and is set to tree when the action must open a new tree view. view_mode is only considered if view_type is form, and ignored otherwise. The four possibilities are : o form,tree : the view is first displayed as a form, the list view can be displayed by clicking the “alternate view button” ; o tree,form : the view is first displayed as a list, the form view can be displayed by clicking the “alternate view button” ; o form : the view is displayed as a form and there is no way to switch to list view ; o tree : the view is displayed as a list and there is no way to switch to form view. (version 5 introduced graph and calendar views) usage is used [+ *TODO* +] target the view will open in new window like wizard. They indicate at the user that he has to open a new window in a new „tab‟. Administration > Custom > Low Level > Base > Action > Window Actions
+
+Examples of actions¶ This action is declared in server/bin/addons/project/project_view.xml.
+<record model="ir.actions.act_window" id="open_view_my_project"> <field name="name">project.project</field> <field name="res_model">project.project</field> <field name="view_type">tree</field> <field name="domain">[('parent_id','=',False), ('manager', '=', uid)]</field> <field name="view_id" ref="view_my_project" /> </record>
+
+This action is declared in server/bin/addons/stock/stock_view.xml.
+<record model="ir.actions.act_window" id="action_picking_form"> <field name="name">stock.picking</field> <field name="res_model">stock.picking</field> <field name="type">ir.actions.act_window</field> <field name="view_type">form</field> <field name="view_id" ref="view_picking_form"/> <field name="context">{'contact_display': 'partner'}</field> </record>
+
+Url Action
+Here‟s an example of a .XML file that declares a wizard.
+<?xml version="1.0"?> <openerp> <data> <wizard string="Employee Info" model="hr.employee" name="employee.info.wizard" id="wizard_employee_info"/> </data> </openerp>
+
+A wizard is declared using a wizard tag. See “Add A New Wizard” for more information about wizard XML. also you can add wizard in menu using following xml entry
+<?xml version="1.0"?> <openerp> <data> <wizard string="Employee Info" model="hr.employee" name="employee.info.wizard" id="wizard_employee_info"/> <menuitem name="Human Resource/Employee Info" action="wizard_employee_info" type="wizard" id="menu_wizard_employee_info"/> </data> </openerp>
+
+Report Action
+Reports in Open ERP are explained in chapter “Reports Reporting”. Here‟s an example of a XML file that declares a RML report :
+<?xml version="1.0"?> <openerp> <data> <report id="sale_category_print" string="Sales Orders By Categories" model="sale.order" name="sale_category.print" rml="sale_category/report/sale_category_report.rml" menu="True" auto="False"/>
+
+</data> </openerp>
+
+A report is declared using a report tag inside a “data” block. The different arguments of a report tag are : id : an identifier which must be unique. string : the text of the menu that calls the report (if any, see below). model : the Open ERP object on which the report will be rendered. rml : the .RML report model. Important Note : Path is relative to addons/ directory. menu : whether the report will be able to be called directly via the client or not. Setting menu to False is useful in case of reports called by wizards. auto : determines if the .RML file must be parsed using the default parser or not. Using a custom parser allows you to define additional functions to your report.
+
+

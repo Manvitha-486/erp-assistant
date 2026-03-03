@@ -1,0 +1,11 @@
+# Inventory Management
+
+## Stock Adjustment
+To perform a manual stock adjustment:
+1. Go to Inventory → Adjustments
+2. Select the warehouse
+3. Enter the item SKU and the new quantity
+4. Submit for approval
+
+## Restocking
+Restocking alerts are triggered automatically when stock falls below 10 units.
