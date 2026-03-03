@@ -9,5 +9,6 @@ faiss-cpu==1.13.2
 python-dotenv==1.0.1
 pypdf==4.0.2
 langchain-google-genai==0.0.9
+langchain-text-splitters==0.0.1
 chardet==5.2.0
 python-multipart==0.0.9
