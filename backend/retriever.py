@@ -5,10 +5,10 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from embeddings import get_embeddings
 
-BASE_DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../data")
+BASE_DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 CORE_DATA_PATH = os.path.join(BASE_DATA_PATH, "core")
 UPLOADS_DATA_PATH = os.path.join(BASE_DATA_PATH, "uploads")
-VECTOR_STORE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../vector_store")
+VECTOR_STORE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vector_store")
 
 # Simple memory cache so we don't read from disk every time
 _vector_stores = {}
